@@ -1,0 +1,8 @@
+{
+  "name": "Remix Remix Remix Xiomara · Mis XV Años · Invitación de Gala",
+  "description": "Invitación web interactiva de gala para los 15 Años de Xiomara con temática de flores y mariposas en lila, rosa, violeta y blanco, cuenta regresiva, música y RSVP por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

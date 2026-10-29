@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-fondo-base: #0c0418;
+    --color-fondo-grad-1: #22093e;
+    --color-fondo-grad-2: #3f1268;
+    --color-resplandor-glow: #e879f9;
+    --color-resplandor-glow-rgb: 232, 121, 249;
+    --color-acento-secundario: #c084fc;
+    --color-acento-secundario-rgb: 192, 132, 252;
+    --color-metal-acento: #f5d0fe;
+    --color-metal-light: #ffffff;
+    --color-metal-dark: #a855f7;
+    --color-tarjeta-glass: rgba(20, 7, 38, 0.62);
+    --color-tarjeta-borde: rgba(232, 121, 249, 0.22);
+    --color-texto-titulo: #ffffff;
+    --color-texto-muted: #fae8ff;
+    --theme-name: 'Lila Real & Flores y Mariposas';
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-fondo-base);
+    color: #ffffff;
+    overflow-x: hidden;
+    touch-action: manipulation;
+  }
+}
+
+/* Typography Utility Classes */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.12em;
+}
+
+.font-cursive {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-garamond {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* Metallic Text & Border Effects - Clean & Crisp */
+.text-metallic-silver {
+  background: linear-gradient(180deg, #ffffff 0%, #f3e8ff 50%, #d8b4fe 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-metallic-gold {
+  background: linear-gradient(180deg, #fffbeb 0%, #fef08a 45%, #ca8a04 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-filter {
+  filter: drop-shadow(0 0 10px rgba(var(--color-resplandor-glow-rgb), 0.45));
+}
+
+.glow-filter-intense {
+  filter: drop-shadow(0 0 16px rgba(var(--color-resplandor-glow-rgb), 0.6));
+}
+
+/* Astetic Luxury Glass Card */
+.glass-panel {
+  background: var(--color-tarjeta-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-tarjeta-borde);
+  box-shadow: 0 10px 32px -6px rgba(5, 1, 12, 0.65), inset 0 1px 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.glass-panel-interactive {
+  background: var(--color-tarjeta-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-tarjeta-borde);
+  box-shadow: 0 10px 32px -6px rgba(5, 1, 12, 0.65), inset 0 1px 1px 0 rgba(255, 255, 255, 0.16);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-interactive:hover {
+  border-color: rgba(var(--color-resplandor-glow-rgb), 0.5);
+  box-shadow: 0 14px 40px -6px rgba(var(--color-resplandor-glow-rgb), 0.3), inset 0 1px 2px 0 rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.glass-pill {
+  background: rgba(25, 9, 48, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 4px 20px -2px rgba(5, 1, 12, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+}
+
+/* Banda Rosa Traslúcida: Rosa Pastel / Bebé con Alta Traslucidez de lado a lado */
+.banda-rosa-traslucida {
+  width: 100%;
+  background: 
+    linear-gradient(
+      140deg,
+      rgba(255, 240, 248, 0.18) 0%,
+      rgba(254, 215, 235, 0.12) 50%,
+      rgba(255, 230, 242, 0.16) 100%
+    ),
+    radial-gradient(ellipse at 50% 0%, rgba(255, 255, 255, 0.28) 0%, transparent 68%),
+    rgba(20, 4, 18, 0.24);
+  backdrop-filter: blur(10px) saturate(135%);
+  -webkit-backdrop-filter: blur(10px) saturate(135%);
+  border-top: 1px solid rgba(255, 220, 238, 0.42);
+  border-bottom: 1px solid rgba(255, 220, 238, 0.42);
+  border-left: none;
+  border-right: none;
+  box-shadow: 
+    0 8px 30px -4px rgba(15, 2, 14, 0.35),
+    0 0 22px 1px rgba(254, 215, 235, 0.18),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.58),
+    inset 0 -1px 1px 0 rgba(255, 215, 235, 0.22);
+}
+
+.banda-rosa-pill {
+  background: 
+    linear-gradient(135deg, rgba(255, 240, 248, 0.22) 0%, rgba(254, 215, 235, 0.15) 100%),
+    rgba(20, 4, 18, 0.22);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 225, 242, 0.48);
+  box-shadow: 0 4px 14px -2px rgba(18, 2, 16, 0.25), inset 0 1px 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.banda-rosa-input {
+  background: rgba(22, 5, 20, 0.28);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 215, 235, 0.35);
+  color: #ffffff;
+}
+
+.banda-rosa-input:focus {
+  border-color: #fbcfe8;
+  box-shadow: 0 0 0 2px rgba(254, 215, 235, 0.45);
+  outline: none;
+}
+
+/* Sombra de alta legibilidad para textos sobre fondo pastel traslúcido */
+.text-gala-readable {
+  text-shadow: 0 1.5px 3.5px rgba(18, 2, 18, 0.85), 0 0 10px rgba(18, 2, 18, 0.4);
+}
+
+
+/* Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 0.92;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes ambient-breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03) translateY(-4px);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 24s linear infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float-gentle 5s ease-in-out infinite;
+}
+
+.animate-ambient-breathe {
+  animation: ambient-breathe 22s ease-in-out infinite;
+}
+
+.shimmer-button {
+  background: linear-gradient(90deg, #9333ea 0%, #c084fc 40%, #f472b6 50%, #c084fc 60%, #9333ea 100%);
+  background-size: 200% 100%;
+  animation: shimmer-sweep 4s linear infinite;
+}
